@@ -163,8 +163,7 @@ cdef class VideoCodecContext(CodecContext):
         def __get__(self):
             return self.ptr.coded_height
 
-    @property
-    def color_range(self):
+    property color_range:
         """
         Color range of context.
 
@@ -176,8 +175,7 @@ cdef class VideoCodecContext(CodecContext):
         def __set__(self, value):
             self.ptr.color_range = value
 
-    @property
-    def colorspace(self):
+    property colorspace:
         """
         Colorspace of context.
 
