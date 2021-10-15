@@ -216,6 +216,7 @@ cdef extern from "libavcodec/avcodec.h" nogil:
         int max_b_frames
         int has_b_frames
         AVColorRange color_range
+        AVColorSpace colorspace
 
         # Audio.
         AVSampleFormat sample_fmt
