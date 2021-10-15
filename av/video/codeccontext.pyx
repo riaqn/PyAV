@@ -175,3 +175,16 @@ cdef class VideoCodecContext(CodecContext):
 
         def __set__(self, value):
             self.ptr.color_range = value
+
+    @property
+    def colorspace(self):
+        """
+        Colorspace of context.
+
+        Wraps :ffmpeg:`AVFrame.colorspace`.
+        """
+        def __get__(self):
+            return self.ptr.colorspace
+
+        def __set__(self, value):
+            self.ptr.colorspace = value
